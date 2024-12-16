@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaFacebook, FaGoogle } from 'react-icons/fa';
 import './styles.css';
 
-// Function to generate CAPTCHA text
+
 const generateCaptchaText = () => {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let captchaText = '';
@@ -22,25 +22,25 @@ const LoginPage = () => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Validation for username
+    
     if (!username) {
       alert('Username is required');
       return;
     }
 
-    // Validation for password
+    
     if (!password) {
       alert('Password is required');
       return;
     }
 
-    // Validation for captcha
+    
     if (captcha !== captchaText) {
       alert('Incorrect CAPTCHA');
       return;
     }
 
-    // If all validations pass
+    
     console.log('Username:', username);
     console.log('Password:', password);
     console.log('Captcha:', captcha);
