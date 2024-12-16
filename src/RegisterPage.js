@@ -24,31 +24,31 @@ const RegisterPage = () => {
   const handleRegister = (e) => {
     e.preventDefault();
 
-    // Validate passwords
+    
     if (password !== confirmPassword) {
       alert('Passwords do not match');
       return;
     }
 
-    // Validate email format
+   
     if (!email.includes('@')) {
       alert('Please enter a valid email');
       return;
     }
 
-    // Validate mobile number (basic check)
+    
     if (!/^\d{10}$/.test(mobile)) {
       alert('Please enter a valid mobile number');
       return;
     }
 
-    // Validate captcha
+    
     if (captcha !== captchaText) {
       alert('Incorrect CAPTCHA');
       return;
     }
 
-    // Log the details for now (can be replaced with actual registration logic)
+    
     console.log('First Name:', firstName);
     console.log('Last Name:', lastName);
     console.log('Mobile:', mobile);
